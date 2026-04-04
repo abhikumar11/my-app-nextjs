@@ -25,7 +25,7 @@ const User=()=>{
   return(
     <div className="container mt-5">
       <h1>Users</h1>
-      <DataTable data={userData} columns={columns}/>
+      <DataTable data={userData} columns={columns} className="striped bordered hover"/>
     </div>
   )
 }

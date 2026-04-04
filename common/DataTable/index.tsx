@@ -1,4 +1,7 @@
 "use client";
+
+import { Table } from "react-bootstrap";
+
 export interface Column<T> {
      header: string;
      key: T | string;
@@ -14,8 +17,9 @@ const DataTable = <T extends { id: string | number }>({
      data,
      className,
 }: TableProps<T>) => {
+    return(
     <div>
-        <table>
+        <Table className={className}>
             <thead>
                 <tr>
                   {columns.map((item,index)=>(
@@ -36,7 +40,8 @@ const DataTable = <T extends { id: string | number }>({
                     ))
                 }
             </tbody>
-        </table>
+        </Table>
     </div>
+    )
 };
 export default DataTable;
